@@ -1,0 +1,203 @@
+.features-section {
+  padding: 72px 16px;
+  background: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: clamp(20px, 2.8vw, 32px);
+  font-weight: 600;
+  margin-bottom: 36px;
+  color: #111827;
+}
+
+.features-grid {
+  /* single-line horizontal layout with smooth scrolling on small screens */
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 12px 8px 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* hide default scrollbar in modern browsers but keep functionality */
+.features-grid::-webkit-scrollbar { height: 8px; }
+.features-grid::-webkit-scrollbar-thumb { background: rgba(15,23,42,0.08); border-radius: 8px; }
+.features-grid { scrollbar-color: rgba(15,23,42,0.08) transparent; }
+
+.feature-card {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  padding: 26px 18px;
+  border: 1px solid #eef2f7;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  min-height: 160px;
+  /* keep each card on one line; allow horizontal scrolling if container too small */
+  flex: 0 0 260px; /* base width on small/medium screens */
+}
+
+/* On very wide screens, distribute cards across the available width while keeping a single row */
+@media (min-width: 1200px) {
+  .features-grid {
+    overflow-x: visible;
+    justify-content: center;
+  }
+  .feature-card {
+    flex: 1 1 0; /* allow cards to grow/shrink and fill the row */
+    min-width: 0;
+  }
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: #2563eb;
+  transition: background 240ms ease;
+}
+
+.feature-card:hover:not(.active) {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.12);
+}
+
+.feature-card:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.feature-card .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+  margin-bottom: 12px;
+}
+
+.feature-card .title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.feature-card .desc {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+  margin-top: auto;
+}
+
+.feature-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.feature-card.active {
+  transform: translateY(-6px);
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
+.feature-card.active::before {
+  background: #ff4d4f;
+}
+
+.feature-card.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6px;
+  background: #ff4d4f;
+}
+
+/* Centered variant */
+.feature-card--center {
+  align-items: center;
+  text-align: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 575.98px) {
+  .features-section {
+    padding: 40px 12px;
+  }
+  .features-grid {
+    gap: 16px;
+  }
+  .feature-card {
+    padding: 16px;
+    min-height: auto;
+  }
+  .feature-card .icon {
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .features-grid {
+    gap: 18px;
+  }
+  .feature-card {
+    padding: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .features-grid {
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+}
+
+/* Utility small variant */
+.feature-card--sm {
+  padding: 16px;
+  min-height: 120px;
+}
+
+/* Ensure readable text scaling */
+.feature-card .title,
+.feature-card .desc {
+  word-break: break-word;
+}

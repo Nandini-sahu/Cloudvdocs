@@ -1,0 +1,285 @@
+<!-- Cloud V Docs – Modern Feature Section -->
+<section class="cv-section">
+  <div class="cv-container">
+
+    <!-- Header -->
+    <header class="cv-header">
+      <span class="cv-badge">Docs · Overview</span>
+      <h1>Cloud V Documentation Overview</h1>
+      <p>
+       This documentation provides a structured guide to deploying, operating,
+        and scaling Cloud V across hotel environments. Each section is written
+        for practical use by hotel staff, IT teams, and solution partners.
+        </p>
+    </header>
+
+    <!-- Docs Summary -->
+    <!-- <section class="cv-summary">
+      <p>
+        <strong>Cloud V Docs</strong> provides step-by-step instructions,
+        operational guidance, and technical references for using Cloud V in
+        real hotel environments. Whether you are onboarding a property,
+        managing daily operations, or integrating external systems, this
+        documentation serves as the central source of truth.
+      </p>
+    </section> -->
+
+    <!-- Docs Sections -->
+    <!-- <section class="cv-docs-sections">
+      <h2 class="cv-docs-title">Cloud V Docs Overview</h2>
+      <p class="cv-docs-intro">
+        This documentation provides a structured guide to deploying, operating,
+        and scaling Cloud V across hotel environments. Each section is written
+        for practical use by hotel staff, IT teams, and solution partners.
+      </p>
+    </section> -->
+
+    <!-- Feature Grid -->
+    <!-- Docs Navigation Grid -->
+    <div class="cv-grid">
+
+      <article class="cv-card">
+        <h3>Getting Started</h3>
+        <p>
+          Step-by-step guidance to set up Cloud V for your hotel, configure
+          properties, users, and permissions.
+        </p>
+        <ul>
+          <li>Platform overview</li>
+          <li>Property & user setup</li>
+          <li>First-day checklist</li>
+        </ul>
+        <a href="/docs/getting-started" class="cv-link">Read documentation →</a>
+      </article>
+
+      <article class="cv-card">
+        <h3>Hotel Operations</h3>
+        <p>
+          Learn how Cloud V supports front desk, housekeeping, maintenance,
+          and daily operational workflows.
+        </p>
+        <ul>
+          <li>Task & request flows</li>
+          <li>Department coordination</li>
+          <li>Operational best practices</li>
+        </ul>
+        <a href="/docs/operations" class="cv-link">View operations docs →</a>
+      </article>
+
+      <article class="cv-card">
+        <h3>Security & Architecture</h3>
+        <p>
+          Understand how Cloud V protects guest data and scales securely
+          across single or multi-property deployments.
+        </p>
+        <ul>
+          <li>Encryption & backups</li>
+          <li>Compliance readiness</li>
+          <li>System architecture</li>
+        </ul>
+        <a href="/docs/security" class="cv-link">Explore security →</a>
+      </article>
+
+      <article class="cv-card">
+        <h3>Administration</h3>
+        <p>
+          Documentation for administrators managing users, roles, reports,
+          and system-wide settings.
+        </p>
+        <ul>
+          <li>User & role management</li>
+          <li>Audit logs</li>
+          <li>System configuration</li>
+        </ul>
+        <a href="/docs/admin" class="cv-link">Admin guides →</a>
+      </article>
+
+      <article class="cv-card">
+        <h3>Integrations & API</h3>
+        <p>
+          Integrate Cloud V with PMS, third-party services, and custom systems
+          using secure APIs.
+        </p>
+        <ul>
+          <li>API authentication</li>
+          <li>Webhooks</li>
+          <li>Integration examples</li>
+        </ul>
+        <a href="/docs/api" class="cv-link">API documentation →</a>
+      </article>
+
+      <article class="cv-card">
+        <h3>Troubleshooting</h3>
+        <p>
+          Find solutions to common issues, performance tips, and operational
+          troubleshooting guides.
+        </p>
+        <ul>
+          <li>Common errors</li>
+          <li>System status checks</li>
+          <li>Support escalation</li>
+        </ul>
+        <a href="/docs/troubleshooting" class="cv-link">Get help →</a>
+      </article>
+
+    </div>
+
+    <!-- CTA -->
+    <!-- <div class="cv-cta">
+      <h2>See Cloud V in Action</h2>
+      <p>Explore how hotels are already modernizing their operations.</p>
+      <a href="/docs" class="cv-btn">View Cloud V Docs</a>
+    </div> -->
+
+  </div>
+</section>
+
+<!-- Styles (Docs‑style, clean & modern) -->
+<style>
+/* .cv-section {
+  background: linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
+  color: #e5e7eb;
+  padding: 6rem 1.5rem;
+  font-family: Inter, system-ui, sans-serif;
+}  */
+
+
+.cv-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.cv-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+} 
+
+.cv-badge {
+  display: inline-block;
+  background: #1f2937;
+  color: #60a5fa;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.cv-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+
+.cv-header p {
+  color: #9ca3af;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.cv-card {
+  background: linear-gradient(180deg, #111827, #0b1220);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 2.2rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cv-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(96,165,250,0.15), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+
+.cv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+}
+
+.cv-card:hover::before {
+  opacity: 1;
+}
+
+
+.cv-card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+
+.cv-card p {
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+
+.cv-card ul {
+  padding-left: 1.2rem;
+  color: #d1d5db;
+}
+
+.cv-card li {
+  margin-bottom: 0.4rem;
+}
+
+.cv-cta {
+  margin-top: 6rem;
+  text-align: center;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  padding: 3.5rem 2rem;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+}
+
+
+.cv-cta h2 {
+  margin-bottom: 0.5rem;
+}
+
+.cv-cta p {
+  margin-bottom: 1.5rem;
+  color: #e0e7ff;
+}
+
+.cv-btn {
+  background: #fff;
+  color: #1e40af;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cv-btn:hover {
+  background: #e5e7eb;
+}
+
+.cv-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  font-weight: 600;
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.cv-link:hover {
+  text-decoration: underline;
+}
+section {
+    padding-top: 0.5rem;
+    padding-bottom: 2.5rem;
+}
+</style>
