@@ -486,10 +486,10 @@ export const APP_MENU_ITEMS = [
 ];
 export const MEGA_MENU_ITEMS = {
   usefulLinks: [
-    { label: 'Cloud Hosting & Deployment', url:'/solutions/cloud-hosting-deployment'},
-    { label: 'DevOps & CI/CD Automation', url:'/solutions/devops-ci-cd-automation'},
+    { label: 'Cloud Hosting & Deployment', url:'/solutions/cloud-hosting-deploymen'},
+    { label: 'DevOps & CI/CD Automation', url:'/solutions/devops'},
     { label: 'Scalable Infrastructure', url:'/solutions/scalable-infrastructure'},
-    { label: 'Database & Storage Solutions', url:'/solutions/database-storage-solutions'},
+    { label: 'Database & Storage Solutions', url:'/solutions/database-storage'},
     { label: 'Security & Compliance', url:'/solutions/security-compliance'},
     { label: 'Monitoring & Analytics', url:'/solutions/monitoring-analytics'},
     { label: 'API Management', url:'API Management'},
